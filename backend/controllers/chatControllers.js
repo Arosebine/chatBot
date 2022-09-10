@@ -191,7 +191,7 @@ const addToGroup = asyncHandler(async (req, res) => {
   } else {
     res.json(added);
   }
-});
+})
 
 module.exports = {
   accessChat,
@@ -200,4 +200,4 @@ module.exports = {
   renameGroup,
   addToGroup,
   removeFromGroup,
-};
+}

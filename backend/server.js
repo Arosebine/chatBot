@@ -43,23 +43,23 @@ if (process.env.NODE_ENV === "production") {
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = process.env.PORT;
+const port = process.env.PORT;
 
 const server = app.listen(
-  PORT,
-  console.log(`Server running on PORT ${PORT}...`.yellow.bold)
+  port,
+  console.log(`Server running on PORT ${port}...`.yellow.bold)
 );
 
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://localhost:8800",
     // credentials: true,
   },
 });
 
 io.on("connection", (socket) => {
-  console.log("Connected to socket.io");
+  console.log("Connected to socket.io".cyan);
   socket.on("setup", (userData) => {
     socket.join(userData._id);
     socket.emit("connected");

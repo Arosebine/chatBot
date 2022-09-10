@@ -4,14 +4,14 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js",
+    "start": "nodemon backend/server.js",
     "server": "nodemon backend/server.js"
   },
   "keywords": [
     "mern",
     "chat-app"
   ],
-  "author": "Piyush Agarwal",
+  "author": "Piyush Agarwal, seyi etc",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
